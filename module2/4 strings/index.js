@@ -32,7 +32,7 @@ console.log(fullnamelit === fullName)  // false
 
 
 let color1=new String("Red");
-let color2=new String("red");
+let color2=new String("Red");
 
 console.log(color1 == color2) // false bcs 2 objects is always false
 
