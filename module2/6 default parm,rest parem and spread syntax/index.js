@@ -44,7 +44,7 @@ let answer=sumofall(1,3,5,6,7)
 console.log(answer)
 
 
-const arr=[1,2,3,4,5,6,7,8,9]
+const arr=[1,2,[3,4,5],6,7,8,9]
 
 function sine(...args){
     let sum=0;
@@ -55,3 +55,13 @@ function sine(...args){
 }
 
 console.log(sine(...arr))
+
+let ss='honey singh'
+console.log(ss.indexOf('ram'))
+
+let sss='hello'
+console.log(sss.replace('l','x'))
+
+
+let ar=[...ss]
+console.log(ar)
