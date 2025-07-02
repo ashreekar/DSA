@@ -30,6 +30,6 @@ int main()
 {
 
     int ans=prouduct(234)-sum(234);
-    std::cout<<ans;
+    std::cout<<ans<<std::endl;
     return 0;
 }
