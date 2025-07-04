@@ -26,3 +26,8 @@ console.log(colors)  // .reverse()  reverses the original
 const na=newA.toReversed()
 console.log(newA)
 console.log(na)
+
+// include()
+
+console.log(na.includes("Pinky"))
+console.log(na.includes("Reddyky"))

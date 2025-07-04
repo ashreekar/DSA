@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        input, button {
+            padding: 0.5rem;
+            margin: 0.5rem;
+            font-size: 1rem;
+        }
+        #result {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guess the Number (1–100)</h1>
+    <p>Try to guess the randomly generated number!</p>
+
+    <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="100">
+    <button onclick="checkGuess()">Submit</button>
+
+    <div id="result"></div>
+    <div id="score"></div>
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+        const maxAttempts = 100;
+
+        function checkGuess() {
+            const input = document.getElementById("guessInput");
+            const result = document.getElementById("result");
+            const scoreDisplay = document.getElementById("score");
+
+            let guess = parseInt(input.value);
+
+            if (isNaN(guess) || guess < 1 || guess > 100) {
+                result.textContent = "Please enter a valid number between 1 and 100.";
+                return;
+            }
+
+            attempts++;
+
+            if (guess === randomNumber) {
+                const score = 100 - attempts;
+                result.textContent = `🎉 Congratulations! You guessed it right. The number was ${randomNumber}.`;
+                scoreDisplay.textContent = `Your score: ${score}`;
+                disableInput();
+            } else if (attempts >= maxAttempts) {
+                result.textContent = `❌ You've used all your attempts! The number was ${randomNumber}.`;
+                disableInput();
+            } else {
+                result.textContent = `❗ Your guess is too ${guess > randomNumber ? "high" : "low"}. Try again.`;
+            }
+
+            input.value = ""; // Clear input field
+            input.focus(); // Focus back on input
+        }
+
+        function disableInput() {
+            document.getElementById("guessInput").disabled = true;
+        }
+    </script>
+
+</body>
+</html>
