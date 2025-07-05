@@ -23,6 +23,7 @@ const grace_marks=students.map(student=>{
     return student;
 })
 //console.log(grace_marks)
+console.log(students) //array is muttated
 
 // step 2
 const shortlisted=grace_marks.filter(student => student.marks > 60);
