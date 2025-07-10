@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <div class="root">
+        <h1>JS DOM Events</h1>
+        <button onclick="clicc()">Dark mode</button>
+    </div>
+
+    <div style="width: 200px ; height: 200px; border:1px solid black; margin: 20px; padding: 20px;" id="welcome">
+        Welcome!!
+    </div>
+
+    <input type="text" value="" placeholder="enter your naem">
+    <script>
+        // let toggle = 0;
+        // function clicc() {
+
+        //     if (!toggle) {
+        //         document.querySelector('body').style.backgroundColor = 'black';
+        //         document.querySelector('body').style.color = 'white';
+        //         toggle = 1;
+        //     } else {
+        //          document.querySelector('body').style.backgroundColor='white';
+        // document.querySelector('body').style.color='black';
+        // toggle=0;
+        //     }
+
+        // }
+
+        //document.getElementById("welcome").onmouseover=chnagee;
+           document.querySelector("#welcome").onmouseover=chnagee;
+           document.querySelector("#welcome").onmouseleave=chnagee2;
+
+            function chnagee(){
+              document.querySelector("#welcome").innerHTML="Thank you!!"  
+            }
+
+            function chnagee2(){
+              document.querySelector("#welcome").innerHTML="Welcome!!"  
+            }
+
+            document.querySelector("input").onchange=uppercase;
+
+            function uppercase(){
+                document.querySelector('input').value=document.querySelector('input').value.toUpperCase()
+            }
+    </script>
+</body>
+
+</html>

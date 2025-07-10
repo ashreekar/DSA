@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My titile</title>
+</head>
+
+<body>
+
+    <div id="box">
+        <h1 class="headers">Header main one</h1>
+        <h2 class="headers">Header second one</h2>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quam.</p>
+        <p>lorme10</p>
+    </div>
+
+
+    <script>
+// using id
+// let idd=document.getElementById("box");
+// console.log(idd);
+
+// let paragraph=document.getElementById('para')
+// //console.log(paragraph);
+
+// // using tag name
+// let paras=document.getElementsByTagName('p')
+// console.log(paras)
+// console.log(paras[0])
+
+// // using class name
+// let headers=document.getElementsByClassName('headers')
+// console.log(headers)
+// console.log(headers[0])
+
+
+// Using CSS Slector
+// querySelector
+
+const ele1=document.querySelector('#box')
+console.log(ele1)
+
+const ele2=document.querySelector('.headers')
+console.log(ele2)
+
+const ele2All=document.querySelectorAll('.headers')
+console.log(ele2All)
+console.log(ele2All[1])
+
+const ele3=document.querySelectorAll('p')
+console.log(ele3)
+console.log(ele3[1])
+
+console.log(ele3.length)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listner</title>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ducimus.</p>
+
+    <button>Reset</button>
+
+    <script>
+
+        // addEventListner
+        document.querySelector('p').addEventListener('click', function () {
+            document.querySelector('p').style.color = 'red';
+        })
+
+
+        function shortner() {
+            document.querySelector('p').innerText = 'Namaskara devru'
+        }
+        document.querySelector('p').addEventListener('click', shortner);
+
+        document.querySelector('p').addEventListener('mouseover', mse);
+
+
+        let mss = 0;
+        function mse() {
+            if (mss) {
+                document.querySelector('p').innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ducimus.'
+                mss=0;
+            } else {
+                document.querySelector('p').innerHTML = 'Mouse over'
+                mss=1;
+            }
+
+        }
+        // removeEventListner
+
+        function reset() {
+            document.querySelector('p').removeEventListener('mouseover',mse)
+        }
+
+        document.querySelector('button').addEventListener('click',reset)
+
+
+        // applying addEventListner to window
+        window.addEventListener('resize',sizeText);
+
+        function sizeText(){
+            document.querySelector('body').style.fontSize='50px';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="h11">My name is Bulla!!</h1>
+    <p id="paras"></p>
+
+    <img src="./img3.jpg" alt="img 1" id="fimg" height="400px" width="600px">
+
+    <script>
+
+// .innerHTML=
+
+        let fheader=document.querySelector('#h11');
+        fheader.innerHTML="My name is Kalla!";
+
+/// changing attribute
+// .src
+
+document.querySelector('#fimg').src="./img2.jpg";
+
+
+// adding compltely new element
+let para=document.getElementById('paras');
+para.innerHTML="<h2>This is heading 2</h2> <ol><li>Trains</li><li>Trams</li><li>Buses</li></ol>"
+
+
+    </script>
+</body>
+</html>

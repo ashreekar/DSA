@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add remove</title>
+</head>
+<body>
+    <div class="box1" style="border: solid 1px black; margin: 20px; padding: 5px;">
+        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quas.</p>
+    </div>
+
+    <div class="box2" style="border: solid 1px black; margin: 20px; padding: 5px;">
+        <p class="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste harum similique nihil blanditiis labore laudantium quae est provident? Odit, magnam?</p>
+    </div>
+
+    <script>
+        let para2=document.createElement('p');
+        para2.innerHTML="Added using JS in box 1"
+        para2.style="color: red; font: bold";
+
+        let box1=document.querySelector('.box1');
+        box1.appendChild(para2)
+
+
+        let para3=document.createElement('p')
+        para3.innerHTML="Added using JS in box 2 before para taht existed"
+        para3.style="color: red; font: bold";
+
+
+        document.querySelector('.box2').insertBefore(para3,document.querySelector('.p2'))
+
+
+
+        // to remove any elemtn
+        document.querySelector('.p1').remove()
+
+        // or
+        let p2=document.querySelector('.p2')
+        p2.remove()
+    </script>
+</body>
+</html>
